@@ -1,10 +1,10 @@
-package com.example.service;
+package com.example.sqlitedemo.service;
 
 import android.content.Context;
 
-import com.example.dao.StudentDAOImpl;
-import com.example.dao.StudentDao;
-import com.example.model.Student;
+import com.example.sqlitedemo.dao.StudentDAOImpl;
+import com.example.sqlitedemo.dao.StudentDao;
+import com.example.sqlitedemo.model.Student;
 
 import java.util.List;
 

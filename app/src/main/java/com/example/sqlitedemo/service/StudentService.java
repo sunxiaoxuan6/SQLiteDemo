@@ -1,7 +1,6 @@
-package com.example.service;
+package com.example.sqlitedemo.service;
 
-import com.example.model.Room;
-import com.example.model.Student;
+import com.example.sqlitedemo.model.Student;
 
 import java.util.List;
 

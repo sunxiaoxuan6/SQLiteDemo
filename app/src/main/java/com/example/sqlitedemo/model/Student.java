@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.sqlitedemo.model;
 
 import java.io.Serializable;
 
@@ -6,39 +6,23 @@ public class Student implements Serializable {
     public static final String TBL_Student = "create table if not exists student(" +
             "id integer primary key autoincrement," +
             "name varchar(20)," +
-            "student_id integer," +
-            "sex varchar(20)," +
-            "dorm_id integer," +
-            "faculty varchar(20)," +
-            "class1 varchar(20)," +
-            "educational integer," +
-            "start_time varchar(20),"+
-            "contact varchar(200))";
+            "classmate varchar(20)," +
+            "age integer)";
 
     private int id;
     private String name;
-    private int student_id;
-    private String sex;
-    private int dorm_id;
-    private String faculty;
-    private String class1;
-    private int educational;
-    private String  start_time;
-    private String  contact;
+    private String classmate;
+    private int age;
 
-    public Student(){
 
-    }
-    public Student(String name, int student_id, String sex, int dorm_id, String faculty, String class1, int educational, String start_time, String contact) {
+    public Student( String name, String classmate, int age) {
         this.name = name;
-        this.student_id = student_id;
-        this.sex = sex;
-        this.dorm_id = dorm_id;
-        this.faculty = faculty;
-        this.class1 = class1;
-        this.educational = educational;
-        this.start_time = start_time;
-        this.contact = contact;
+        this.classmate = classmate;
+        this.age = age;
+    }
+
+    public Student() {
+
     }
 
     public int getId() {
@@ -57,82 +41,29 @@ public class Student implements Serializable {
         this.name = name;
     }
 
-    public int getStudent_id() {
-        return student_id;
+    public String getClassmate() {
+        return classmate;
     }
 
-    public void setStudent_id(int student_id) {
-        this.student_id = student_id;
+    public void setClassmate(String classmate) {
+        this.classmate = classmate;
     }
 
-    public String getSex() {
-        return sex;
+    public int getAge() {
+        return age;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public int getDorm_id() {
-        return dorm_id;
-    }
-
-    public void setDorm_id(int dorm_id) {
-        this.dorm_id = dorm_id;
-    }
-
-    public String getFaculty() {
-        return faculty;
-    }
-
-    public void setFaculty(String faculty) {
-        this.faculty = faculty;
-    }
-
-    public String getClass1() {
-        return class1;
-    }
-
-    public void setClass1(String class1) {
-        this.class1 = class1;
-    }
-
-    public int getEducational() {
-        return educational;
-    }
-
-    public void setEducational(int educational) {
-        this.educational = educational;
-    }
-
-    public String getStart_time() {
-        return start_time;
-    }
-
-    public void setStart_time(String start_time) {
-        this.start_time = start_time;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
-                ", student_id=" + student_id +
-                ", sex='" + sex + '\'' +
-                ", dorm_id=" + dorm_id +
-                ", faculty='" + faculty + '\'' +
-                ", class1='" + class1 + '\'' +
-                ", educational=" + educational +
-                ", start_time='" + start_time + '\'' +
-                ", contact='" + contact + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", classmate='" + classmate + '\'' +
+                ", age=" + age +
                 '}';
     }
 }
