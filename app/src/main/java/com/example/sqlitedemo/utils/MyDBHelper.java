@@ -15,7 +15,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Student.TBL_Student);
+        db.execSQL(Student.Student);
     }
 
     @Override

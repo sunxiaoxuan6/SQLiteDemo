@@ -38,22 +38,18 @@ public class StudentAdapter extends BaseAdapter {
         if(convertView == null) {
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_student, parent, false);
             holder = new ViewHolder();
-
             holder.name = convertView.findViewById(R.id.name);
             holder.classmate = convertView.findViewById(R.id.classmate);
             holder.age = convertView.findViewById(R.id.age);
-
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-
         Student student = students.get(position);
         holder.name.setText(student.getName());
         holder.classmate.setText(String.valueOf(student.getClassmate()));
         holder.age.setText(String.valueOf(student.getAge()));
-
-        return null;
+        return convertView;
     }
     static class ViewHolder {
         TextView name;

@@ -49,14 +49,8 @@ public class StudentDAOImpl implements StudentDao{
     public List<Student> selectAllStudents() {
         String sql = "select * from student";
         List<Student> students = null;
-
-        // 1. 获取SQLiteDatabase对象
         dbs = helper.getReadableDatabase();
-
-        // 2. 执行SQL查询
         Cursor cursor = dbs.rawQuery(sql, null);
-
-        // 3. 处理结果
         if (cursor != null && cursor.getCount() > 0) {
             students = new ArrayList<>();
             while (cursor.moveToNext()) {
@@ -69,11 +63,9 @@ public class StudentDAOImpl implements StudentDao{
 
                 students.add(student);
             }
-            // 4. 关闭cursor
             cursor.close();
         }
         dbs.close();
-        // 5. 返回结果
         return students;
     }
 }

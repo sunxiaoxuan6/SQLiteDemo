@@ -3,7 +3,7 @@ package com.example.sqlitedemo.model;
 import java.io.Serializable;
 
 public class Student implements Serializable {
-    public static final String TBL_Student = "create table if not exists student(" +
+    public static final String Student = "create table if not exists student(" +
             "id integer primary key autoincrement," +
             "name varchar(20)," +
             "classmate varchar(20)," +
