@@ -10,7 +10,7 @@ import com.example.sqlitedemo.model.Student;
 public class MyDBHelper extends SQLiteOpenHelper {
 
     public MyDBHelper(Context context) {
-        super(context, "dorm.db", null, 3);
+        super(context, "dorm.db", null, 5);
     }
 
     @Override
